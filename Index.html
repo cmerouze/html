@@ -1,0 +1,151 @@
+<!DOCTYPE html> 
+
+<html lang="en">
+
+  <head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <title>Clemence</title>
+  
+  <meta name="description" content="A collection of posters.">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css" >
+      
+      <style>  
+          .image-part {
+      width: 10%;
+      height: 10vh;
+      margin: 0;
+      padding: 0;
+      position: relative;
+
+      display: inherit;
+      float: left;
+
+      background-repeat:no-repeat;
+    }
+
+    @media (max-width: 600px) {
+      .image-part {
+        width: 100vw;
+        height: 100vh;
+
+        background-size: cover !important;
+        background-position: center !important;
+        position: absolute;
+      }
+    }
+
+    .image-part:nth-child( 10n+1 ){
+      clear:both;
+    }
+
+    .links {
+      position: absolute;
+      bottom: .5rem;
+      right: 1rem;
+      font-size: 0.5rem;
+      z-index: 9999;
+    }
+
+    .links a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .links a:hover,
+    .links a:visited,
+    .links a:active {
+      opacity: 0.7;
+      text-decoration: line-through;
+    }
+</style>
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+  <script type="text/javascript">
+  
+  $(document).ready(function() {
+
+      /* Array of images */
+      var imgs= [
+                  '15.png',
+                '6.png',
+                '18.png',
+                '1.png',
+                '10.png',
+                'liquid.png',
+                '5.png',
+                '14.png',
+                '4.png',
+                '8.png',
+                '13.png',
+                '12.png',
+                '3.png',
+                '19.png',
+                '9.png',
+                '11.png',
+                '17.png',
+                '2.png',
+                '17.png',
+                '16.png',
+                '1.png',
+                '7.png',
+            ];
+
+      imgs = shuffle( imgs );
+
+      var imgLength = imgs.length,
+          windowWidth = $( window ).width();
+
+      $(".image-part").css({ "background-size":  windowWidth }); 
+       
+      $(".image-part").mouseenter(function(){ slider(this); });
+
+
+
+      function slider( element ) {
+             
+        var count = $( element ).data('count') + 1,
+            windowWidth = $( window ).width();
+
+        $( element ).css({"background-image": "url(" + imgs[count] + ")", "background-size":  windowWidth }); 
+
+        var num = $( element ).data("count") + 1;       
+        $( element ).data('count', num); 
+
+      };
+
+      function shuffle( array ) {
+
+        var currentIndex = array.length, temporaryValue, randomIndex;
+
+        while (0 !== currentIndex) {
+
+          randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex -= 1;
+
+          temporaryValue = array[currentIndex];
+          array[currentIndex] = array[randomIndex];
+          array[randomIndex] = temporaryValue;
+        }
+
+        return array;
+
+      };
+      
+  });
+  
+  
+
+  </script><div class="images-holder">
+
+    <div class="image-part" style="background-image:url(17.png); background-position: 0vw 0vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -10vw 0vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -20vw 0vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -30vw 0vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -40vw 0vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -50vw 0vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -60vw 0vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -70vw 0vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -80vw 0vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -90vw 0vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: 0vw -10vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -10vw -10vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -20vw -10vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -30vw -10vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -40vw -10vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -50vw -10vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -60vw -10vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -70vw -10vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -80vw -10vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -90vw -10vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: 0vw -20vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -10vw -20vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -20vw -20vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -30vw -20vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -40vw -20vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -50vw -20vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -60vw -20vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -70vw -20vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -80vw -20vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -90vw -20vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: 0vw -30vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -10vw -30vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -20vw -30vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -30vw -30vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -40vw -30vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -50vw -30vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -60vw -30vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -70vw -30vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -80vw -30vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -90vw -30vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: 0vw -40vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -10vw -40vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -20vw -40vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -30vw -40vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -40vw -40vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -50vw -40vh;" data-count="0"></div><div class="image-p17.pngart" style="background-image:url(17.png); background-position: -60vw -40vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -70vw -40vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -80vw -40vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -90vw -40vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: 0vw -50vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -10vw -50vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -20vw -50vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -30vw -50vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -40vw -50vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -50vw -50vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -60vw -50vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -70vw -50vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -80vw -50vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -90vw -50vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: 0vw -60vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -10vw -60vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -20vw -60vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -30vw -60vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -40vw -60vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -50vw -60vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -60vw -60vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -70vw -60vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -80vw -60vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -90vw -60vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: 0vw -70vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -10vw -70vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -20vw -70vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -30vw -70vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -40vw -70vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -50vw -70vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -60vw -70vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -70vw -70vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -80vw -70vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -90vw -70vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: 0vw -80vh;" data-count="0"></div>
+      <div class="image-part" style="background-image:url(17.png); background-position: -10vw -80vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -20vw -80vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -30vw -80vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -40vw -80vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -50vw -80vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -60vw -80vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -70vw -80vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -80vw -80vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -90vw -80vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: 0vw -90vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -10vw -90vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -20vw -90vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -30vw -90vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -40vw -90vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -50vw -90vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -60vw -90vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -70vw -90vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -80vw -90vh;" data-count="0"></div><div class="image-part" style="background-image:url(17.png); background-position: -90vw -90vh;" data-count="0"></div>
+  </div>
+
+
+  </head>
+  <body>
